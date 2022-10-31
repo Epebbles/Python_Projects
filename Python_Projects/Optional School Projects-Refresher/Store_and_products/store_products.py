@@ -1,11 +1,11 @@
 import store
 import products
 
-slaveway = store.Store(name="Slaveway")
-hifiman = products.Product(name="Hifiman", price=100, catagory="headphone")
-sundara = products.Product(name="Sundara", price=600, catagory="headphone")
-hyperX = products.Product(name="HyperX", price=89, catagory="microphone")
+target = store.Store(name="Target")
+coffeeCup = products.Product(name="coffee cup", price=25, category="Cups")
+headphones = products.Product(name="Corsair Virtuoso", price=275, category="Headphones")
+animal = products.Product(name="Kevin", price=300, category="Dog")
 
-slaveway.add_product(hifiman).add_product(sundara).add_product(hyperX)
+target.add_product(coffeeCup).add_product(headphones).add_product(animal)
 
-slaveway.sell_product(0).set_clearance(50).sell_product(0)
+# target.sell_product(1).set_clearance(50).sell_product(0)

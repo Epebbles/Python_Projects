@@ -7,11 +7,6 @@ class Store:
         self.products.append(new_product)
         return self
     
-    def sell_product(self, id):
-        print("The previous item: Is sold!")
-        self.products[id].print_info()
-        del self.products[id]
-        return self
     def inflation(self, percent_increase):
         for product in self.products:
             product.update_price(percent_increase, True)
@@ -20,6 +15,11 @@ class Store:
     def set_clearance(self, percent_discount):
         for product in self.products: 
             product.update_price(percent_discount, False)
+    
+    def sell_product(self, id):
+        self.products[id].print_info()
+        del self.products[id]
+        return self
 
 
 if __name__ == "__main__":
@@ -27,3 +27,5 @@ if __name__ == "__main__":
 else:
     print("The file is being executed because it is imported by another file. The file is called: ", __name__)
         
+    
+
